@@ -1,5 +1,5 @@
 class NPO():
-    def __init__(self, website, name, email, number, donor, volunteer, image, volunteer_num):
+    def __init__(self, website, name, email, number, donor, volunteer, image, description):
         self.website = website
         self.name = name
         self.email = email
@@ -7,8 +7,14 @@ class NPO():
         self.donor = donor
         self.volunteer = volunteer
         self.image = image
-        self.volunteer_num = volunteer_num
+        self.volunteer_num = 0
+        self.description = description
+
     def post(self):
         """Post using html or flask"""
     def delete(self):
         """Delete using html or flask"""
+    def add_volunteer(self, volunteer_num):
+        """adds volunteer and the total volunteers is displayed using flask or html"""
+        self.volunteer_num += 1
+
