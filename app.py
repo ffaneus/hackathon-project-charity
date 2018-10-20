@@ -1,13 +1,16 @@
+
 from flask import Flask, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import psycopg2
 from config import url
-from form import Npo_form
-
+from forms import Npo_form
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "NPOST.ME"
+app.config['DEBUG']=True
+app.config['SECRET_KEY']="True"
 app.config['SQLALCHEMY_DATABASE_URI'] = url
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+app.config['SQLALCHEMY_ECHO'] = True
 db = SQLAlchemy(app)
 
 class Npo(db.Model):

@@ -17,6 +17,7 @@
 <div class="form-container">
 	<h2>Main View</h2>
 	<form action="{{url_for('index')}}" method="POST">
+
 			{{form.hidden_tag()}}
 			{{form.name.label}}
 			{{form.name}}
@@ -34,5 +35,4 @@
 	</form>	
 </div>
 {% endblock %}
-
 
