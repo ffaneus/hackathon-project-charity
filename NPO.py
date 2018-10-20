@@ -15,9 +15,9 @@ class Npo():
         self.image = image
         self.volunteer_num = 0
         self.description = description
-        npos.append(self)
     def delete(self):
         """Delete using html or flask and delete from database"""
+        npos.remove(self)
     def add_volunteer(self, days, hours):
         """adds volunteer and the total volunteers is displayed using flask or html"""
         self.volunteer_num += 1
