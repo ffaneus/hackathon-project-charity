@@ -20,9 +20,10 @@
 
 <body>
 	<nav>
+		<div><a href="{{ url_for('index') }}">HOME</a></div>
 		<div>NPO</div>
 		<div><a href="{{ url_for('donor') }}">Donor</a></div>
-		<div>Volunteer</div>
+		<div><a href="{{ url_for('volunteer') }}">Volunteer</a></div>
 	</nav>
 	{% block content %}
 	{% endblock %}

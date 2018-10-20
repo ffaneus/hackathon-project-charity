@@ -10,6 +10,9 @@ def index():
 def donor():
     return render_template('donor.html')
 
+@app.route('/volunteer')
+def volunteer():
+    return render_template('volunteer.html')
 
 if __name__ == "__main__":
     app.run()
