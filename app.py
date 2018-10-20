@@ -13,6 +13,7 @@ db = SQLAlchemy(app)
 class Npo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
+    phone = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(50), nullable=False)
     website = db.Column(db.String(50), nullable=False)
     description = db.Column(db.String(50), nullable=False)
@@ -20,19 +21,21 @@ class Npo(db.Model):
     contributors = db.Column(db.String(50), nullable=False)
 
     def __repr__(self):
-        return f'{self.id} {self.name}'
+        return f'{self.id} {self.name} {self.website}'
 
 @app.route('/', methods=["GET", "POST"])
 def index():
     form = Npo_form()
     if form.validate_on_submit():
         name = form.name.data
+        phone = form.phone.data
         email = form.email.data
         website = form.website.data
         description = form.description.data
         seeking = form.seeking.data
         contributors = form.contributors.data
-        company = Npo(name=name, email=email, description=description, seeking=seeking, contributors=contributors, website=website)
+        company = Npo(name=name, phone=phone, email=email, website=website, description=description, seeking=seeking, contributors=contributors)
+        print(company)
         db.session.add(company)
         db.session.commit()
         return redirect(url_for('index'))
