@@ -8,14 +8,18 @@ from wtforms.validators import InputRequired, Length, Email, URL, DataRequired
 
 class Npo_form(FlaskForm):
     name = StringField("What is the name of your organization?", validators=[DataRequired()])
-    email = StringField("What is the name of your organization?", validators=[DataRequired()])
     phone = StringField("What is the name of your organization?", validators=[DataRequired()])
-    phone = StringField("Please enter a phone number where your organization can be contacted:", validators=[InputRequired()])
-    email = StringField("Please enter an email address where your organization can be contacted:", validators=[InputRequired(message="Email address is required")])
-    website = StringField("Please enter your organization's url:", validators=[DataRequired()])
-    description = StringField("Tell us a little about your organization:", validators=[InputRequired(message="Please tell us about your organization."), Length(min=1,max=2000)])
-    seeking = StringField("Tell us a little bit about what your organization is looking for:", validators=[InputRequired("Please describe what you are looking for."), Length(min=1,max=2000)])
-    contributors = SelectField("Please select which type of contribution your organization is looking for ... ", choices=[("Donors","Select this option if you are seeking contributions of material goods."),("Volunteers","Select this option if you are seeking contributions of time."),("Donors and Volunteers","Select this option if you are seeking both contributions of material and time.")])
+    email = StringField("What is the name of your organization?", validators=[DataRequired()])
+    website = StringField("What is the name of your organization?", validators=[DataRequired()])
+    description = StringField("What is the name of your organization?",validators=[DataRequired()])
+    seeking = StringField("What is the name of your organization?",validators=[DataRequired()])
+    contributors = StringField("What is the name of your organization?",validators=[DataRequired()])
+    #phone = StringField("Please enter a phone number where your organization can be contacted:", validators=[InputRequired()])
+    #email = StringField("Please enter an email address where your organization can be contacted:", validators=[InputRequired(message="Email address is required")])
+    #website = StringField("Please enter your organization's url:", validators=[DataRequired()])
+    #description = StringField("Tell us a little about your organization:", validators=[InputRequired(message="Please tell us about your organization."), Length(min=1,max=2000)])
+    #seeking = StringField("Tell us a little bit about what your organization is looking for:", validators=[InputRequired("Please describe what you are looking for."), Length(min=1,max=2000)])
+    #contributors = SelectField("Please select which type of contribution your organization is looking for ... ", choices=[("Donors","Select this option if you are seeking contributions of material goods."),("Volunteers","Select this option if you are seeking contributions of time."),("Donors and Volunteers","Select this option if you are seeking both contributions of material and time.")])
     submit=SubmitField("Submit")
 
 

@@ -62,8 +62,34 @@
 	</div>
 
 </div>
+<<<<<<< HEAD
 
 
 <script src="/static/script.js"></script>
+=======
+<div class="form-container">
+	<h2>Main View</h2>
+	<form action="{{url_for('index')}}" method="POST">
+
+			{{form.hidden_tag()}}
+			{{form.name.label}}
+			{{form.name}}
+			{{form.phone.label}}
+			{{form.phone}}
+			{{form.email.label}}
+			{{form.email}}
+
+			{{form.website.label}}
+			{{form.website}}
+			{{form.description.label}}
+			{{form.description}}
+			{{form.seeking.label}}
+			{{form.seeking}}
+			{{form.contributors.label}}
+			{{form.contributors}}
+			{{form.submit}}
+	</form>	
+</div>
+>>>>>>> fa013d822076a558a4d87f29fe11577f8b1ab2b7
 {% endblock %}
 
