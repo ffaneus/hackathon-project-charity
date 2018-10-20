@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="scoped-content">
+	<style>
+		.card-container {
+			margin: 5px;
+			border: 1px solid black;
+		}
+		.top-row, .bottom-row {
+			display: flex;
+			justify-content: space-around;
+		}
+		.avatar {
+			height: 100px;
+			width: 100px;
+			border-radius: 50%;
+			background: blue;
+		}
+	</style>
+</div>
+<h2>DONOR PAGE</h2>
+<div>
+		<div class="card-container">
+			<div class="top-row">
+					<div class="description">THe description of the problem is here. We need help doing something.</div>
+					<div class="avatar">avatar</div>
+			</div>
+			<div class="bottom-row">
+				<button>More Info</button>
+				<button>Volunteer</button>
+			</div>
+		</div>
+		<div class="card-container">
+			<div class="top-row">
+					<div class="description">THe description of the problem is here. We need help doing something.</div>
+					<div class="avatar">avatar</div>
+			</div>
+			<div class="bottom-row">
+				<button>More Info</button>
+				<button>Volunteer</button>
+			</div>
+		</div>
+		<div class="card-container">
+			<div class="top-row">
+					<div class="description">THe description of the problem is here. We need help doing something.</div>
+					<div class="avatar">avatar</div>
+			</div>
+			<div class="bottom-row">
+				<button>More Info</button>
+				<button>Volunteer</button>
+			</div>
+		</div>
+</div>
+{% endblock %}

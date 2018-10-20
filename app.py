@@ -8,5 +8,13 @@ def index():
     form=Npo_form()
     return render_template('index.html',form=form)
 
+@app.route('/donor')
+def donor():
+    return render_template('donor.html')
+
+@app.route('/volunteer')
+def volunteer():
+    return render_template('volunteer.html')
+
 if __name__ == "__main__":
     app.run()

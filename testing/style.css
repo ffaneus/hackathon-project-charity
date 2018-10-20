@@ -1,0 +1,41 @@
+.main{
+    border: solid;
+}
+
+.landing-page-option{
+    border: solid;
+    margin: 15px;
+    padding: 5px;
+    height: 256px;
+    width: 256px;
+    box-shadow: 10px 5px 15px 0px rgba(0,0,0,0.75);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    z-index: 2;
+}
+
+.landing-page-option:hover{
+    height: 266px;
+    width: 266px;
+    box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.75);
+}
+
+.landing-page-option div{
+    border: solid;
+    grid-column: 2;
+    grid-row: 2;
+    z-index: 1;
+}
+
+.landing-page-option div:first-child{
+    text-align: center;
+    padding-top: 48px;
+    font-size: 36px;
+    visibility: visible;
+}
+
+.landing-page-option div:last-child{
+    visibility: hidden;
+}
