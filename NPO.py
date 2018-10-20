@@ -2,7 +2,7 @@ from donor import Donor
 from volunteer import Volunteer
 
 
-class NPO():
+class Npo():
     def __init__(self, website, name, email, number, target_donors, target_volunteers, image, description):
         self.donors = []
         self.volunteers = []
