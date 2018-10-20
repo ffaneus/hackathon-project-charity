@@ -1,0 +1,4 @@
+NPOs = []
+donors = []
+volunteers = []
+

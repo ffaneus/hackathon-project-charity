@@ -12,6 +12,7 @@ class NPO():
 
     def post(self):
         """Post using html or flask and save into database"""
+        NPOs.append(self)
     def delete(self):
         """Delete using html or flask and delete from database"""
     def add_volunteer(self, volunteer_num):
