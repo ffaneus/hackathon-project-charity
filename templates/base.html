@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+		<title>Hackathon</title>
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	nav {
+		display: flex;
+		justify-content: space-around;
+	}
+	nav * {
+		border: 1px solid black;
+	}
+
+</style>
+</head>
+
+<body>
+	<nav>
+		<div>NPO</div>
+		<div>Donor</div>
+		<div>Volunteer</div>
+	</nav>
+	{% block content %}
+	{% endblock %}
+</body>
