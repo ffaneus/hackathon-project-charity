@@ -1,4 +1,9 @@
 from flask import Flask, render_template
+from forms import Npo_form
+app = Flask(__name__)
+app.config['DEBUG']=True
+app.config['SECRET_KEY']="True"
+@app.route('/',methods=["POST","GET"])
 import psycopg2
 from config import url
 from flask_sqlalchemy import SQLAlchemy
@@ -19,7 +24,8 @@ class Npo(db.Model):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    form=Npo_form()
+    return render_template('index.html',form=form)
 
 @app.route('/donor')
 def donor():
