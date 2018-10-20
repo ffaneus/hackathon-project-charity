@@ -1,3 +1,1 @@
 npos = []
-donors = []
-volunteers = []
