@@ -2,21 +2,21 @@
 {% block content %}
 	<h2>Main View</h2>
 	<form action="{{url_for('index')}}" method="POST">
-	{{form.hidden_tag()}}
-	{{form.name.label}}
-	{{form.name}}
-	{{form.phone_number.label}}
-	{{form.phone_number}}
-	{{form.email.label}}
-	{{form.email}}
-	{{form.web_site.label}}
-	{{form.web_site}}
-	{{form.description.label}}
-	{{form.description}}
-	{{form.seeking.label}}
-	{{form.seeking}}
-	{{form.Contributors.label}}
-	{{form.Contributors}}
+	{{form.hidden_tag()}}<br>
+	{{form.name.label}}<br>
+	{{form.name}}<br>
+	{{form.phone_number.label}}<br>
+	{{form.phone_number}}<br>
+	{{form.email.label}}<br>
+	{{form.email}}<br>
+	{{form.web_site.label}}<br>
+	{{form.web_site}}<br>
+	{{form.description.label}}<br>
+	{{form.description}}<br>
+	{{form.seeking.label}}<br>
+	{{form.seeking}}<br>
+	{{form.Contributors.label}}<br>
+	{{form.Contributors}}<br>
 	{{form.submit}}
 	</form>	
 {% endblock %}
