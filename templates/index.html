@@ -1,23 +1,38 @@
 {% extends 'base.html' %}
 {% block content %}
+<div id="scoped-content">
+<style>
+	form {
+		display: flex;
+		flex-direction: column;
+	}
+	.form-container {
+		text-align: center;
+		width: 50%;
+		margin: 0 auto;
+	}
+</style>
+
+</div>
+<div class="form-container">
 	<h2>Main View</h2>
 	<form action="{{url_for('index')}}" method="POST">
-	{{form.hidden_tag()}}<br>
-	{{form.name.label}}<br>
-	{{form.name}}<br>
-	{{form.phone_number.label}}<br>
-	{{form.phone_number}}<br>
-	{{form.email.label}}<br>
-	{{form.email}}<br>
-	{{form.web_site.label}}<br>
-	{{form.web_site}}<br>
-	{{form.description.label}}<br>
-	{{form.description}}<br>
-	{{form.seeking.label}}<br>
-	{{form.seeking}}<br>
-	{{form.Contributors.label}}<br>
-	{{form.Contributors}}<br>
-	{{form.submit}}
+
+			{{form.hidden_tag()}}
+			{{form.name.label}}
+			{{form.name}}
+			{{form.email.label}}
+			{{form.email}}
+			{{form.website.label}}
+			{{form.website}}
+			{{form.description.label}}
+			{{form.description}}
+			{{form.seeking.label}}
+			{{form.seeking}}
+			{{form.contributors.label}}
+			{{form.contributors}}
+			{{form.submit}}
 	</form>	
+</div>
 {% endblock %}
 
