@@ -5,4 +5,4 @@ class Donors():
         self.name = name
     def donate(self):
         """Donate the item(s)/ send to NPO"""
-        donors.append(self.name)
+        donors.append(self)
