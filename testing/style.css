@@ -1,34 +1,66 @@
+body{
+    background-color: #010996;
+}
+
 .main{
-    border: solid;
+    /* border: solid; */
+}
+
+.logo-header{
+    margin-bottom: 64px; 
+}
+
+.logo{
+    height: 100%;
+    width: 100%;
+}
+
+.overlay{
+    position: absolute;
+    bottom: 13%;
+    right: 10%;
+    height: 350px;
+    /* border: solid; */
+    background-color: rgba(0, 255, 98, 0.459);
 }
 
 .landing-page-option{
-    border: solid;
-    margin: 15px;
+    margin: 10px;
     padding: 5px;
-    height: 256px;
-    width: 256px;
-    box-shadow: 10px 5px 15px 0px rgba(0,0,0,0.75);
+    height: 266px;
+    width: 266px;
+    box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.75);
     border-radius: 15px;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
-    z-index: 2;
     perspective: 1000px;
+    background-color: rgba(228, 228, 253, 0.301);
+    border: solid;
+    border-width: 1px;
 }
 
+.landing-page-option:first-child{
+    margin-right: 96px;
+    /* background-color: red; */
+}
 .landing-page-option:hover{
-    /* height: 266px;
+    height: 266px;
     width: 266px;
-    box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.75); */
+    box-shadow: 10px 5px 15px 0px rgba(0,0,0,0.75);
+
+}
+
+.questions{
+    color: white;
 }
 
 .landing-page-option div{
-    border: solid;
     grid-column: 2;
     grid-row: 2;
-    z-index: 1;
+    z-index: 0;
     backface-visibility: hidden;
+    color: white;
 }
 
 .landing-page-option div:first-child{
@@ -39,6 +71,9 @@
 }
 
 .landing-page-option div:last-child{
+    text-align: center;
+    padding-top: 8px;
+    font-size: 24px;
     visibility: visible;
     transform: rotateY(180deg)
 }
