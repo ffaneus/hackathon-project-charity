@@ -1,34 +1,15 @@
 <!DOCTYPE html>
 <head>
-		<title>Hackathon</title>
-<style>
-	body {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-	nav {
-		display: flex;
-		justify-content: space-around;
-	}
-	nav * {
-		border: 1px solid black;
-	}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-4.1.3-dist/css/bootstrap.css')}}">
+    <script src="{{ url_for('static', filename='bootstrap-4.1.3-dist/js/bootstrap.js')}}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{{title}}</title>
 </head>
 
 <body>
-	<nav>
-		<div><a href="{{ url_for('index') }}">HOME</a></div>
-		<div>NPO</div>
-		<div><a href="{{ url_for('donor') }}">Donor</a></div>
-		<div><a href="{{ url_for('volunteer') }}">Volunteer</a></div>
-	</nav>
 	{% block content %}
 	{% endblock %}
 </body>
-<<<<<<< HEAD
-
-=======
->>>>>>> 10eaa05dbccef34634113ca5445a3cc5d79b0a34

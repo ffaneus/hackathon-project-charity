@@ -1,12 +1,32 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Company Info</h2>
-<p>Name</p>
-<p>Phone Number</p>
-<p>Email</p>
-<p>Website</p>
-<p>Description</p>
-<p>Seeking</p>
-<p>Contributors</p>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-5 mx-auto logo-header">
+            <img src="/testing/images/logo.png" alt="" class="logo">
+        </div>
+
+        <div class="col-11 mx-auto">
+            <div class="npo-box row">
+
+                {% for npo in npos %}
+                <div class="card col-5">
+                    <div>
+                        {{npo.name}}
+                    </div>
+                    <div>
+                        {{npo.seeking}}
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
 {% endblock %}

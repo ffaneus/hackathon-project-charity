@@ -32,12 +32,13 @@ class AnswerForm(FlaskForm):
     answer = TextAreaField('answer', validators=[DataRequired()])
     submit = SubmitField('submit')
 '''
-@app.route('/contribute', methods=['GET'])
-def show_listings():
-    if request.args.get('seeking'):
-        seeking = request.args.get('seeking')
-        listings = Npo.query.filter_by(choices=seeking).all()
-        return render_template('placehoder.html', choices=seeking)
+
+# @app.route('/contribute', methods=['GET'])
+# def show_listings():
+#     if request.args.get('seeking'):
+#         seeking = request.args.get('seeking')
+#         listings = Npo.query.filter_by(choices=seeking).all()
+#         return render_template('placehoder.html', choices=seeking)
 
     
 

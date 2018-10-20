@@ -1,9 +1,10 @@
 
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, request
 from flask_sqlalchemy import SQLAlchemy
 import psycopg2
 from config import url
-from forms import Npo_form
+from form import Npo_form
+
 app = Flask(__name__)
 app.config['DEBUG']=True
 app.config['SECRET_KEY']="True"
@@ -12,6 +13,7 @@ db = SQLAlchemy(app)
 
 app.config['SQLALCHEMY_ECHO'] = True
 db = SQLAlchemy(app)
+
 
 class Npo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -24,6 +26,7 @@ class Npo(db.Model):
 
     def __repr__(self):
         return f'{self.id} {self.name}'
+
 
 @app.route('/', methods=["GET", "POST"])
 def index():
@@ -42,17 +45,30 @@ def index():
 
     return render_template('index.html', form=form)
 
-@app.route('/donor')
+
+@app.route('/non-profit')
 def donor():
-    return render_template('donor.html')
+    form = Npo_form()
+    return render_template('form.html', form=form)
+
 
 @app.route('/volunteer')
 def volunteer():
     return render_template('volunteer.html')
 
-@app.route('/company')
+
+@app.route('/contribute')
 def company():
+    # if the request has a filter
+    if request.args.get('seeking'):
+        seeking = request.args.get('seeking')
+        npos = Npo.query.filter_by(choices=seeking).all()
+        return render_template('company.html', npos=npos)
+
+    # if the request doesn't have a filter
+    npos = Npo.query.all()
     return render_template('company.html')
+
 
 if __name__ == "__main__":
     app.run()

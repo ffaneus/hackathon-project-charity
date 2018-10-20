@@ -23,14 +23,19 @@
 
             <div class="col-11 mx-auto">
                 <div class="npo-box row">
+
+                    {% for npo in npos %}
                     <div class="card col-5">
                         <div>
                             name
                         </div>
                         <div>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quam perferendis facilis, blanditiis amet odit, aliquam repudiandae quidem officiis necessitatibus unde, quasi eligendi dolorum autem corrupti est ipsam harum illum.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quam perferendis
+                            facilis, blanditiis amet odit, aliquam repudiandae quidem officiis necessitatibus unde,
+                            quasi eligendi dolorum autem corrupti est ipsam harum illum.
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
 
