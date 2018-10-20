@@ -14,12 +14,13 @@
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
     z-index: 2;
+    perspective: 1000px;
 }
 
 .landing-page-option:hover{
-    height: 266px;
+    /* height: 266px;
     width: 266px;
-    box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.75); */
 }
 
 .landing-page-option div{
@@ -27,6 +28,7 @@
     grid-column: 2;
     grid-row: 2;
     z-index: 1;
+    backface-visibility: hidden;
 }
 
 .landing-page-option div:first-child{
@@ -37,5 +39,12 @@
 }
 
 .landing-page-option div:last-child{
-    visibility: hidden;
+    visibility: visible;
+    transform: rotateY(180deg)
+}
+
+.flipper {
+    transition: .75s;
+    transform-style: preserve-3d;
+    position: relative;
 }
