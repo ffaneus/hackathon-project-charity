@@ -53,13 +53,13 @@ def index():
 
         return redirect(url_for('index'))
 
-    return render_template('index.html')
+    return render_template('index.html', title="NPOST | HOME")
 
 
 @app.route('/post')
 def donor():
     form = Npo_form()
-    return render_template('form.html', form=form)
+    return render_template('form.html', form=form, title="NPOST | POST")
 
 
 @app.route('/find')
@@ -68,17 +68,17 @@ def company():
     if request.args.get('seeking'):
         seeking = request.args.get('seeking')
         npos = Npo.query.filter_by(contributors=seeking).all()
-        return render_template('company.html', npos=npos)
+        return render_template('company.html', npos=npos, message=seeking, title=f"NPOST | Seeking {seeking}")
 
     # if the request has a filter
     if request.args.get('id'):
         id = request.args.get('id')
         npo = Npo.query.filter_by(id=id).first()
-        return render_template('page.html', npo=npo)
+        return render_template('page.html', npo=npo, title=f"NPOST | {npo.name}")
 
     # if the request doesn't have a filter
     npos = Npo.query.all()
-    return render_template('company.html', npos=npos)
+    return render_template('company.html', npos=npos, message="Donors and volunteers", title="NPOST | Volunteers and Donors")
 
 
 if __name__ == "__main__":
