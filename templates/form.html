@@ -3,35 +3,28 @@
 {% block content %}
 
 <div class="container">
-
-    <div class="row">
-
-        <div class="col-5 mx-auto logo-header">
-            <img src="/static/images/logo.png" alt="" class="logo">
-        </div>
-
-    </div>
+    
     <div class="row">
 
         <div class=" col-4 mx-auto heading">
             Post your Organization's listing:
         </div>
-        <form class="org-form form-group col-12" action="{{url_for('index')}}" method=" post">
+        <form class="org-form form-group col-12" action="{{url_for('index')}}" method="post">
             {{form.hidden_tag()}}
             {{form.name.label}}
             {{form.name}}
-            {{form.phone_number.label}}
-            {{form.phone_number}}
+            {{form.phonenumber.label}}
+            {{form.phonenumber}}
             {{form.email.label}}
             {{form.email}}
-            {{form.web_site.label}}
-            {{form.web_site}}
+            {{form.website.label}}
+            {{form.website}}
             {{form.description.label}}
             {{form.description}}
             {{form.seeking.label}}
             {{form.seeking}}
-            {{form.Contributors.label}}
-            {{form.Contributors}}
+            {{form.contributors.label}}
+            {{form.contributors}}
             {{form.submit}}
         </form>
     </div>

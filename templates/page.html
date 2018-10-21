@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container page">
+
+        <div class="row">
+            <div class="col-8 mx-auto listings">
+                {{npo.name}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8 mx-auto listings">
+                {{npo.phone}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8 mx-auto listings">
+                {{npo.email}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8 mx-auto listings">
+                {{npo.website}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8 mx-auto listings">
+                {{npo.description}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8 mx-auto listings">
+                {{npo.seeking}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8 mx-auto listings">
+                {{npo.contributors}}
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

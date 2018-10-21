@@ -1,20 +1,20 @@
 var forms = document.querySelectorAll(".org-form");
-console.log(forms[0].tagName);
+// console.log(forms[0].tagName);
 
-for (var i = 0; i < forms[0].length; i++) {
-    forms[0][i].classList.add("form-control");
-    console.log(forms[0][i]);
+// for (var i = 0; i < forms[0].length; i++) {
+//     forms[0][i].classList.add("form-control");
+//     console.log(forms[0][i]);
 
-    if(forms[0][i].tagName == 'SELECT'){
-        console.log('select tag')
-        forms[0][i].classList.add('select-tag');
-    }
+//     if(forms[0][i].tagName == 'SELECT'){
+//         console.log('select tag')
+//         forms[0][i].classList.add('select-tag');
+//     }
 
-    if(forms[0][i].type == 'submit'){
-        forms[0][i].classList.add('form-control', 'btn', 'btn-primary', 'button-spacing');
-    }
+//     if(forms[0][i].type == 'submit'){
+//         forms[0][i].classList.add('form-control', 'btn', 'btn-primary', 'button-spacing');
+//     }
 
-}
+// }
 
 
 var cards = document.querySelectorAll(".landing-page-option");

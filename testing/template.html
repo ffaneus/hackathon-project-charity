@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/testing/bootstrap-4.1.3-dist/css/bootstrap.css">
     <script src="/testing/bootstrap-4.1.3-dist/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="/testing/style.css">
     <title>{{title}}</title>
 </head>
 
@@ -21,7 +21,7 @@
         <div class="row">
 
             <div class="col-5 mx-auto logo-header">
-                    <img src="/testing/images/logo.png" alt="" class="logo">
+                <img src="/testing/images/logo.png" alt="" class="logo">
             </div>
 
         </div>
@@ -33,7 +33,8 @@
                     Are you a non-profit?
                 </div>
                 <div style="width:300px;">
-                    I want to contribute
+                    <a href="">
+                        I want to contribute</a>
                 </div>
             </div>
         </div>
@@ -41,9 +42,9 @@
         <div class="row">
 
             <div class="row mx-auto options">
-                <div class="landing-page-option flipper">
+                <div class="landing-page-option flipper" onclick="window.location.href = '/post';">
                     <div>
-                            Post a listing
+                        Post a listing
                     </div>
                     <div>
                         Are you a non-profit organization looking for donations, volunteers, or both? Select this to
@@ -51,9 +52,9 @@
                     </div>
                 </div>
 
-                <div class="landing-page-option flipper">
+                <div class="landing-page-option flipper" onclick='location.href = "/find?seeking=";'>
                     <div>
-                            Donate Supplies / Materials
+                        Donate Supplies / Materials
                     </div>
                     <div>
                         Are you looking to donate material goods? Select this to see postings from organizations near
@@ -61,7 +62,7 @@
                     </div>
                 </div>
 
-                <div class="landing-page-option flipper">
+                <div class="landing-page-option flipper" onclick="window.location.href = '/find?seeking='">
                     <div>
                         Find Volunteer Opporitunites
                     </div>
@@ -77,7 +78,53 @@
     </div>
 
 
-    <script src="{ url_for('static', filename='script.jsstyle.css') }}/testing/"></script>
+    <div class="container page">
+
+        <div class="row">
+            <div class="col-8 mx-auto listings">
+                {{npo.name}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8 mx-auto listings">
+                {{npo.phone}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8 mx-auto listings">
+                {{npo.email}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8 mx-auto listings">
+                {{npo.website}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8 mx-auto listings">
+                {{npo.description}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8 mx-auto listings">
+                {{npo.seeking}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8 mx-auto listings">
+                {{npo.contributors}}
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/testing/script.js"></script>
 </body>
 
 </html>

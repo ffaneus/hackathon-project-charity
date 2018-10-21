@@ -8,12 +8,13 @@ from wtforms.validators import InputRequired, Length, Email, URL, DataRequired
 
 class Npo_form(FlaskForm):
     name = StringField("What is the name of your organization?", validators=[DataRequired()])
-    phone = StringField("What is the name of your organization?", validators=[DataRequired()])
+    phonenumber = StringField("What is the name of your organization?", validators=[DataRequired()])
     email = StringField("What is the name of your organization?", validators=[DataRequired()])
     website = StringField("What is the name of your organization?", validators=[DataRequired()])
     description = StringField("What is the name of your organization?",validators=[DataRequired()])
     seeking = StringField("What is the name of your organization?",validators=[DataRequired()])
-    contributors = StringField("What is the name of your organization?",validators=[DataRequired()])
+    # contributors = StringField("What is the name of your organization?",validators=[DataRequired()])
+    contributors = SelectField("Type of Contribution Organization seeking ... ", choices=[("donors","Select this option if you are seeking contributions of material goods."),("volunteers","Select this option if you are seeking contributions of time."),("both","Select this option if you are seeking both contributions of material and time.")])
     #phone = StringField("Please enter a phone number where your organization can be contacted:", validators=[InputRequired()])
     #email = StringField("Please enter an email address where your organization can be contacted:", validators=[InputRequired(message="Email address is required")])
     #website = StringField("Please enter your organization's url:", validators=[DataRequired()])

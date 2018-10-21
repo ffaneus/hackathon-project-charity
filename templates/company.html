@@ -5,17 +5,15 @@
 
     <div class="row">
 
-        <div class="col-5 mx-auto logo-header">
-            <img src="/testing/images/logo.png" alt="" class="logo">
-        </div>
-
         <div class="col-11 mx-auto">
             <div class="npo-box row">
 
                 {% for npo in npos %}
                 <div class="card col-5">
                     <div>
-                        {{npo.name}}
+                        <a href="/find?id={{npo.id}}">
+                            {{npo.name}}
+                        </a>
                     </div>
                     <div>
                         {{npo.seeking}}

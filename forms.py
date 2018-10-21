@@ -8,12 +8,12 @@ from wtforms.validators import InputRequired, Length, Email, URL
 
 class Npo_form(FlaskForm):
     name = StringField("Organization Name:", validators=[InputRequired(message="Organization name is required!"), Length(min=100, max=1000)])
-    phone_number = StringField("Phone Number:", validators=[InputRequired()])
+    phonenumber = StringField("Phone Number:", validators=[InputRequired()])
     email = StringField("Email Address:", validators=[InputRequired(message="Email address is required"), Email()])
-    web_site = StringField("Organization URL:", validators=[URL(require_tld=True, message="That is not a valid URL.")])
+    website = StringField("Organization URL:", validators=[URL(require_tld=True, message="That is not a valid URL.")])
     description = StringField("Description of Organization:", validators=[InputRequired(message="Please tell us about your organization."), Length(min=100,max=2000)])
     seeking = StringField("Description of Resources Needed:", validators=[InputRequired("Please describe what you are looking for."), Length(min=100,max=2000)])
-    Contributors = SelectField("Type of Contribution Organization seeking ... ", choices=[("Donors","Select this option if you are seeking contributions of material goods."),("Volunteers","Select this option if you are seeking contributions of time."),("Donors and Volunteers","Select this option if you are seeking both contributions of material and time.")])
+    contributors = SelectField("Type of Contribution Organization seeking ... ", choices=[("donors","Select this option if you are seeking contributions of material goods."),("volunteers","Select this option if you are seeking contributions of time."),("both","Select this option if you are seeking both contributions of material and time.")])
     submit=SubmitField("Submit")
     
 '''class LoginForm(FlaskForm):

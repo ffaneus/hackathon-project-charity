@@ -17,9 +17,9 @@ body{
 
 .overlay{
     position: absolute;
-    bottom: 13%;
+    bottom: 22%;
     right: 10%;
-    height: 350px;
+    height: 280px;
     /* border: solid; */
     background-color: rgba(0, 255, 98, 0.459);
 }
@@ -53,6 +53,11 @@ body{
 
 .questions{
     color: white;
+}
+
+.questions a{
+    color: white;
+    text-decoration: underline;
 }
 
 .landing-page-option div{
@@ -148,4 +153,22 @@ text-align: center;
     background-color: rgba(0, 0, 255, 0.459);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+.page{
+    border: solid;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+}
+
+.listings{
+    text-align: center;
+    border: solid;
+    border-color: #6d6d6d;
+    /* border-radius: 10px; */
+    border-width: 1px;
+    font-size: 24px;
+    margin: 10px;
+    padding: 5px;
 }
